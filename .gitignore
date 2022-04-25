@@ -5,3 +5,4 @@
 *.docx
 *.pptx
 .ipynb_checkpoints/
+.src/
