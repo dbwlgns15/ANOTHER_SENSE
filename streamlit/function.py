@@ -74,7 +74,8 @@ def get_feargreed_wordcloud(symbol):
             if y in tag_list:
                 tag_checked_sentence.append(x)
             if y == 'Noun':
-                words.append(x)
+                if len(x) > 1:
+                    words.append(x)
         if tag_checked_sentence == []:
             pass
         else:
@@ -88,7 +89,7 @@ def get_feargreed_wordcloud(symbol):
     test = pad_sequences(test, maxlen=15)
     model = load_model('./src/model.h5')
     pred = model.predict(test)
+    wordcloud = ', '.join(list(dict(Counter(words).most_common(5))))
     feargreed_index = f'{int(((pred.mean()-0.5)*2+0.5)*100)}%'
-    wordcloud = Counter(words)
 
     return feargreed_index, wordcloud

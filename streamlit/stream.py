@@ -1,6 +1,4 @@
 import streamlit as st
-import matplotlib.pyplot as plt
-import numpy as np
 import function
 
 today = function.get_today()
@@ -16,3 +14,4 @@ if fg:
 else:
     st.write('주식종목이름을  다시  확인해주세요.')
 
+st.write(f'가장 자주 등장한 상위 단어 5개:  ',wc)
