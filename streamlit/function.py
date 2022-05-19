@@ -27,7 +27,7 @@ def get_today():
 def get_feargreed_wordcloud(symbol):
     code = get_code(symbol)
     if code == 0:
-        return 0
+        return 0, 0
     today = get_today()
     comment_list = []
     chk = 1
