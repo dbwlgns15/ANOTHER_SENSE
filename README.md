@@ -6,3 +6,5 @@
 ------
 
 [감성 분석 참고 블로그](https://yngie-c.github.io/nlp/2020/07/31/sentiment_analysis/)
+
+[감성사전에 기반한 준지도학습 감성분석 모델](https://realblack0.github.io/portfolio/pmi)

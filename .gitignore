@@ -4,5 +4,6 @@
 *.pdf
 *.docx
 *.pptx
+*.pickle
 .ipynb_checkpoints/
 .src/
