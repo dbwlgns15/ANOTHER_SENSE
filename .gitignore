@@ -5,5 +5,8 @@
 *.docx
 *.pptx
 *.pickle
+*.json
+*.bin
+*.txt
 .ipynb_checkpoints/
 .src/
