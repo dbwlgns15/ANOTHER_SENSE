@@ -34,11 +34,18 @@ if option == '개미 동향 Ants MIND': ## fear&greed와 댓글 분석 페이지
              ''')
     ant_col1, ant_col2 = st.columns(2)
     
-    ant_col1.write('# 시험용')
-    ant_col1.write("> 사람의 마음")
-
-    df = pd.read_csv('./score_kakao.csv')
-    df['날짜'] = pd.to_datetime(df['날짜'])
-    st.line_chart(df.groupby('날짜').mean().rolling(7).mean().round(2)*100,height=300)
-    st.line_chart((0.5+(df.groupby('날짜').mean()['LSTM']-0.5)*(1+df.groupby('날짜').mean()['BERT'])).rolling(7).mean().round(2)*100,height=300)
-    st.line_chart(((df.groupby('날짜').mean()['BERT']+df.groupby('날짜').mean()['LSTM'])/2).rolling(7).mean().round(2)*100,height=300)
+    ant_col1.write(' 시험용')
+    ant_col1.write(" 사람의 마음")
+    if comp == '카카오':
+        df = pd.read_csv('./score_kakao.csv')
+        df['날짜'] = pd.to_datetime(df['날짜'])
+        st.line_chart(df.groupby('날짜').mean().rolling(7).mean()*100,height=300)
+        st.line_chart((0.5+(df.groupby('날짜').mean()['LSTM']-0.5)*(1+df.groupby('날짜').mean()['BERT'])).rolling(7).mean().round(2)*100,height=300)
+        st.line_chart(((df.groupby('날짜').mean()['BERT']+df.groupby('날짜').mean()['LSTM'])/2).rolling(7).mean().round(2)*100,height=300)
+    
+    else:
+        df = pd.read_csv('./score_naver_0301.csv')
+        df['날짜'] = pd.to_datetime(df['날짜'])
+        st.line_chart(df.groupby('날짜').mean().rolling(7).mean()*100,height=300)
+        st.line_chart((0.5+(df.groupby('날짜').mean()['LSTM']-0.5)*(1+df.groupby('날짜').mean()['BERT'])).rolling(7).mean().round(2)*100,height=300)
+        st.line_chart(((df.groupby('날짜').mean()['BERT']+df.groupby('날짜').mean()['LSTM'])/2).rolling(7).mean().round(2)*100,height=300)
