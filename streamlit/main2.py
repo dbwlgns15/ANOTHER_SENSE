@@ -24,15 +24,12 @@ if option == '개미 동향 Ants MIND':
         df = pd.read_csv('./data/feargreed_naver.csv')
 
     df['날짜'] = pd.to_datetime(df['날짜'])
-    df2 = df.copy()
-    df3 = df.copy()
-    df2['공포탐욕'] = df2['BERT'] + df2['LSTM']
-    df2['공포탐욕'] = df2['공포탐욕'] - df2['공포탐욕'].mean()
-    df2 = df2[['날짜','공포탐욕']]
-    df2 = (df2.groupby('날짜').mean().rolling(7).mean()*100).dropna()
-    df3 = (df3.groupby('날짜').mean().rolling(7).mean()*100-50).dropna() 
+    df['공포탐욕'] = df['BERT'] + df['LSTM']
+    df['공포탐욕'] = df['공포탐욕'] - df['공포탐욕'].mean()
+    df2 = (df[['날짜','공포탐욕']].groupby('날짜').mean().rolling(7).mean()*100).dropna()
+    df3 = (df[['날짜','LSTM','BERT']].groupby('날짜').mean().rolling(7).mean()*100-50).dropna() 
     
-    col1, col2 = st.columns([1, 2])
+    col1, col2, col3 = st.columns([1, 1, 1])
     d = col1.date_input("공포탐욕지수가 궁금한 날을 입력해주세요."
     ,value=datetime.date.today()
     ,min_value=datetime.date.today() - datetime.timedelta(days=365)
@@ -48,19 +45,32 @@ if option == '개미 동향 Ants MIND':
         chk = 1
     image = Image.open(f'./data/feargreed_{chk}.png')
     col1.image(image)
+
+    with col2.expander("공포댓글"):
+        x = df[df['날짜'] == d.isoformat()].sort_values(by='공포탐욕')['댓글'].head().to_list()
+        for i in x:
+            st.write(i)
+    with col3.expander("탐욕댓글"):
+        x = df[df['날짜'] == d.isoformat()].sort_values(by='공포탐욕')['댓글'].tail().to_list()
+        for i in x:
+            st.write(i)
     
-    col3, col4 = st.columns([1, 3])
-    period_check = col3.select_slider('기간 설정',
+    col4, col5 = st.columns([1, 3])
+
+    period_check = col4.select_slider('기간 설정',
     options=['1주', '2주' ,'1개월', '3개월', '6개월', '1년'])
     period_dict = {'1주':2, '2주':3, '1개월':5, '3개월':13, '6개월':25, '1년':52}
     day = (datetime.date.today() - datetime.timedelta(weeks=period_dict[period_check])).isoformat()
+    with col4.expander("오늘의 공포탐욕지수"):
+        st.write('a')
+    with col4.expander("어제의 공포탐욕지수"):
+        st.write('a')
+    with col4.expander("지난 한주의 공포탐욕지수"):
+        st.write('a')
+    with col4.expander("지난 한달의 공포탐욕지수"):
+        st.write('a')
 
-    col4.line_chart(df2[df2.index >= day],height=250)
-    col4.line_chart(df3[df3.index >= day],height=250)
+
+    col5.line_chart(df2[df2.index >= day],height=250)
+    col5.line_chart(df3[df3.index >= day],height=250)
     
-
-    with col3.expander("오놀의 공포댓글"):
-        st.write(f'')
-
-    with col3.expander("오놀의 탐욕댓글"):
-        st.write(f'123')
