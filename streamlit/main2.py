@@ -55,21 +55,21 @@ if option == '개미 동향 Ants MIND':
         for i in x:
             st.write(i)
     
-    col4, col5 = st.columns([1, 3])
+    col4, col5 = st.columns([1, 4])
 
     period_check = col4.select_slider('기간 설정',
     options=['1주', '2주' ,'1개월', '3개월', '6개월', '1년'])
     period_dict = {'1주':2, '2주':3, '1개월':5, '3개월':13, '6개월':25, '1년':52}
     day = (datetime.date.today() - datetime.timedelta(weeks=period_dict[period_check])).isoformat()
-    with col4.expander("오늘의 공포탐욕지수"):
-        st.write('a')
-    with col4.expander("어제의 공포탐욕지수"):
-        st.write('a')
-    with col4.expander("지난 한주의 공포탐욕지수"):
-        st.write('a')
-    with col4.expander("지난 한달의 공포탐욕지수"):
-        st.write('a')
 
+    with col4.expander("오늘 공포탐욕지수"):
+        st.write('a')
+    with col4.expander("어제 공포탐욕지수"):
+        st.write('a')
+    with col4.expander("지난 한주 공포탐욕지수"):
+        st.write('a')
+    with col4.expander("지난 한달 공포탐욕지수"):
+        st.write('a')
 
     col5.line_chart(df2[df2.index >= day],height=250)
     col5.line_chart(df3[df3.index >= day],height=250)
