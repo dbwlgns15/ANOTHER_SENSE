@@ -74,16 +74,16 @@ if option == '개미 동향 Ants MIND':
 
     with col4.expander("오늘 공포탐욕지수"):
         x = df2['공포탐욕'][datetime.date.today().isoformat()]
-        st.write(chk_fg(x))
+        st.write(chk_fg(x), f': {x.round(2)}점')
     with col4.expander("어제 공포탐욕지수"):
         x = df2['공포탐욕'][(datetime.date.today()-datetime.timedelta(days=1)).isoformat()]
-        st.write(chk_fg(x))
+        st.write(chk_fg(x), f': {x.round(2)}점')
     with col4.expander("지난 한주 공포탐욕지수"):
         x = df2[df2.index >= (datetime.date.today()-datetime.timedelta(weeks=1)).isoformat()]['공포탐욕'].mean()
-        st.write(chk_fg(x))
+        st.write(chk_fg(x), f': {round(x,2)}점')
     with col4.expander("지난 한달 공포탐욕지수"):
         x = df2[df2.index >= (datetime.date.today()-datetime.timedelta(weeks=4)).isoformat()]['공포탐욕'].mean()
-        st.write(chk_fg(x))
+        st.write(chk_fg(x), f': {round(x,2)}점')
 
     col5.line_chart(df2[df2.index >= day],height=250)
     col5.line_chart(df3[df3.index >= day],height=250)
