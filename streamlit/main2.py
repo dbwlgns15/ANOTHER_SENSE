@@ -62,14 +62,28 @@ if option == '개미 동향 Ants MIND':
     period_dict = {'1주':2, '2주':3, '1개월':5, '3개월':13, '6개월':25, '1년':52}
     day = (datetime.date.today() - datetime.timedelta(weeks=period_dict[period_check])).isoformat()
 
+    def chk_fg(x):
+        if x >= 5:
+            return '매우 탐욕'
+        elif 5 > x >= 0:
+            return '탐욕'
+        elif 0 > x >= -3:
+            return '공포'
+        else:
+            return '매우 공포'
+
     with col4.expander("오늘 공포탐욕지수"):
-        st.write('a')
+        x = df2['공포탐욕'][datetime.date.today().isoformat()]
+        st.write(chk_fg(x))
     with col4.expander("어제 공포탐욕지수"):
-        st.write('a')
+        x = df2['공포탐욕'][(datetime.date.today()-datetime.timedelta(days=1)).isoformat()]
+        st.write(chk_fg(x))
     with col4.expander("지난 한주 공포탐욕지수"):
-        st.write('a')
+        x = df2[df2.index >= (datetime.date.today()-datetime.timedelta(weeks=1)).isoformat()]['공포탐욕'].mean()
+        st.write(chk_fg(x))
     with col4.expander("지난 한달 공포탐욕지수"):
-        st.write('a')
+        x = df2[df2.index >= (datetime.date.today()-datetime.timedelta(weeks=4)).isoformat()]['공포탐욕'].mean()
+        st.write(chk_fg(x))
 
     col5.line_chart(df2[df2.index >= day],height=250)
     col5.line_chart(df3[df3.index >= day],height=250)
