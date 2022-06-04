@@ -1,90 +1,52 @@
 import streamlit as st
-from PIL import Image
-import pandas as pd
-import datetime
+from datetime import date, timedelta
+import execute2
+
 
 st.set_page_config(page_title = 'Ants MIND', layout="wide")
 
-st.experimental_set_query_params(TEAM=['AnotherSense'],Project=['AntsMIND'])
+comp = st.sidebar.selectbox('회사를 선택해주세요. ',('NAVER', '카카오'))
 
-st.sidebar.subheader(':sparkles: Team Another Sense :sunglasses:')
-
-comp = st.sidebar.selectbox('🏢 회사를 선택해주세요. ',('NAVER', '카카오'))
-
-option = st.sidebar.selectbox('열람할 페이지를 선택해주세요.',('메인 홈 Main Home', '기업정보 Company Information', '개미 동향 Ants MIND','기사 News','예측 Prediction'))
+option = st.sidebar.selectbox('응',('개미 동향 Ants MIND','ㅇ'))
 
 if option == '개미 동향 Ants MIND':
     op_emoji = ':ant:'
     st.sidebar.subheader(f'{op_emoji} {option} 페이지입니다')
     st.write(f'# :cupid: {comp} 공포/탐욕 지수')
 
-    if comp == '카카오':
-        df = pd.read_csv('./data/feargreed_kakao.csv')
-    else:
-        df = pd.read_csv('./data/feargreed_naver.csv')
-
-    df['날짜'] = pd.to_datetime(df['날짜'])
-    df['공포탐욕'] = df['BERT'] + df['LSTM']
-    df['공포탐욕'] = df['공포탐욕'] - df['공포탐욕'].mean()
-    df2 = (df[['날짜','공포탐욕']].groupby('날짜').mean().rolling(7).mean()*100).dropna()
-    df3 = (df[['날짜','LSTM','BERT']].groupby('날짜').mean().rolling(7).mean()*100-50).dropna() 
+    feargreed = execute2.feargreed(comp)
     
     col1, col2, col3 = st.columns([1, 1, 1])
-    d = col1.date_input("공포탐욕지수가 궁금한 날을 입력해주세요."
-    ,value=datetime.date.today()
-    ,min_value=datetime.date.today() - datetime.timedelta(days=365)
-    ,max_value=datetime.date.today())
-    x = df2['공포탐욕'][d.isoformat()]
-    if x >= 5:
-        chk = 4
-    elif 5 > x >= 0:
-        chk = 3
-    elif 0 > x >= -3:
-        chk = 2
-    else:
-        chk = 1
-    image = Image.open(f'./data/feargreed_{chk}.png')
-    col1.image(image)
 
+    input_day = col1.date_input("공포탐욕지수가 궁금한 날을 입력해주세요."
+        ,value=date.today()
+        ,min_value=date.today() - timedelta(days=365)
+        ,max_value=date.today())
+
+    col1.image(feargreed.load_img(input_day))
+
+    fear_comments, greed_comments = feargreed.get_comments(input_day)
     with col2.expander("공포댓글"):
-        x = df[df['날짜'] == d.isoformat()].sort_values(by='공포탐욕')['댓글'].head().to_list()
-        for i in x:
-            st.write(i)
+        for comment in greed_comments:
+            st.write(comment)
     with col3.expander("탐욕댓글"):
-        x = df[df['날짜'] == d.isoformat()].sort_values(by='공포탐욕')['댓글'].tail().to_list()
-        for i in x:
-            st.write(i)
+        for comment in fear_comments:
+            st.write(comment)
     
     col4, col5 = st.columns([1, 4])
 
-    period_check = col4.select_slider('기간 설정',
-    options=['1주', '2주' ,'1개월', '3개월', '6개월', '1년'])
-    period_dict = {'1주':2, '2주':3, '1개월':5, '3개월':13, '6개월':25, '1년':52}
-    day = (datetime.date.today() - datetime.timedelta(weeks=period_dict[period_check])).isoformat()
-
-    def chk_fg(x):
-        if x >= 5:
-            return '매우 탐욕'
-        elif 5 > x >= 0:
-            return '탐욕'
-        elif 0 > x >= -3:
-            return '공포'
-        else:
-            return '매우 공포'
+    period_check = col4.select_slider('기간 설정', options=['1주', '2주' ,'1개월', '3개월', '6개월', '1년'])
 
     with col4.expander("오늘 공포탐욕지수"):
-        x = df2['공포탐욕'][datetime.date.today().isoformat()]
-        st.write(chk_fg(x), f': {x.round(2)}점')
+        st.write(feargreed.get_fg_score(0)[0],feargreed.get_fg_score(0)[1])
     with col4.expander("어제 공포탐욕지수"):
-        x = df2['공포탐욕'][(datetime.date.today()-datetime.timedelta(days=1)).isoformat()]
-        st.write(chk_fg(x), f': {x.round(2)}점')
+        st.write(feargreed.get_fg_score(1)[0],feargreed.get_fg_score(1)[1])
     with col4.expander("지난 한주 공포탐욕지수"):
-        x = df2[df2.index >= (datetime.date.today()-datetime.timedelta(weeks=1)).isoformat()]['공포탐욕'].mean()
-        st.write(chk_fg(x), f': {round(x,2)}점')
+        st.write(feargreed.get_fg_score(7)[0],feargreed.get_fg_score(7)[1])
     with col4.expander("지난 한달 공포탐욕지수"):
-        x = df2[df2.index >= (datetime.date.today()-datetime.timedelta(weeks=4)).isoformat()]['공포탐욕'].mean()
-        st.write(chk_fg(x), f': {round(x,2)}점')
+        st.write(feargreed.get_fg_score(30)[0],feargreed.get_fg_score(30)[1])
 
-    col5.line_chart(df2[df2.index >= day],height=250)
-    col5.line_chart(df3[df3.index >= day],height=250)
+    period_df = feargreed.get_period_df(period_check)
+    col5.line_chart(period_df[0],height=250)
+    col5.line_chart(period_df[1],height=250)
     
