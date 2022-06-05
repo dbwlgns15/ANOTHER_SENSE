@@ -2,7 +2,6 @@ import streamlit as st
 from datetime import date, timedelta
 import execute2
 
-
 st.set_page_config(page_title = 'Ants MIND', layout="wide")
 
 comp = st.sidebar.selectbox('회사를 선택해주세요. ',('NAVER', '카카오'))
