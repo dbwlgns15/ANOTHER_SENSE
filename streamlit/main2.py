@@ -1,12 +1,13 @@
 import streamlit as st
 from datetime import date, timedelta
+from PIL import Image
 import execute2
 
 st.set_page_config(page_title = 'Ants MIND', layout="wide")
 
 comp = st.sidebar.selectbox('회사를 선택해주세요. ',('NAVER', '카카오'))
 
-option = st.sidebar.selectbox('응',('개미 동향 Ants MIND','ㅇ'))
+option = st.sidebar.selectbox('',('개미 동향 Ants MIND',''))
 
 if option == '개미 동향 Ants MIND':
     op_emoji = ':ant:'
@@ -48,4 +49,11 @@ if option == '개미 동향 Ants MIND':
     period_df = feargreed.get_period_df(period_check)
     col5.line_chart(period_df[0],height=250)
     col5.line_chart(period_df[1],height=250)
-    
+
+    with st.expander("공포탐욕지수 측정 방법"):
+        flow_img = Image.open(f'./data/feargreed_flow.png')
+        st.image(flow_img)
+        st.write('''
+        LSTM은 \n
+        BERT는
+        ''')
