@@ -9,6 +9,7 @@ class feargreed():
         else:
             df = pd.read_csv('./data/feargreed_naver.csv')        
         df['날짜'] = pd.to_datetime(df['날짜'])
+        df = df.sort_values(by='날짜', ascending=False).reset_index(drop=True)
         df['공포탐욕'] = df['BERT'] + df['LSTM']
         df['공포탐욕'] = df['공포탐욕'] - df['공포탐욕'].mean()
         self.df = df
