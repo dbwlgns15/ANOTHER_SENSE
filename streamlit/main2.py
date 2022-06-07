@@ -19,9 +19,9 @@ if option == '개미 동향 Ants MIND':
     col1, col2, col3 = st.columns([1, 1, 1])
 
     input_day = col1.date_input("공포탐욕지수가 궁금한 날을 입력해주세요."
-        ,value=date.today()
-        ,min_value=date.today() - timedelta(days=365)
-        ,max_value=date.today())
+        ,value=feargreed.df['날짜'][0]
+        ,min_value=feargreed.df['날짜'][0] - timedelta(days=365)
+        ,max_value=feargreed.df['날짜'][0])
 
     col1.image(feargreed.load_img(input_day))
 
@@ -53,7 +53,6 @@ if option == '개미 동향 Ants MIND':
     with st.expander("공포탐욕지수 측정 방법"):
         flow_img = Image.open(f'./data/feargreed_flow.png')
         st.image(flow_img)
-        st.write('''
-        LSTM은 \n
-        BERT는
-        ''')
+        st.latex(r'LSTM= S_{l} \big(0 \leq S_{l} \leq1\big)')
+        st.latex(r'BERT= S_{b} \big(0 \leq S_{b} \leq1\big)')
+        st.latex(r'Score = \big(S_{l}+S_{b}-\frac{\sum \big(S_{l}+S_{b}\big)}{N} \big) \times 100')
