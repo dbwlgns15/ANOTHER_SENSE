@@ -53,6 +53,6 @@ if option == '개미 동향 Ants MIND':
     with st.expander("공포탐욕지수 측정 방법"):
         flow_img = Image.open(f'./data/feargreed_flow.png')
         st.image(flow_img)
-        st.latex(r'LSTM= S_{l} \big(0 \leq S_{l} \leq1\big)')
-        st.latex(r'BERT= S_{b} \big(0 \leq S_{b} \leq1\big)')
+        st.latex(r'LSTM = S_{l} \big(0 \leq S_{l} \leq1\big)')
+        st.latex(r'BERT = S_{b} \big(0 \leq S_{b} \leq1\big)')
         st.latex(r'Score = \big(S_{l}+S_{b}-\frac{\sum \big(S_{l}+S_{b}\big)}{N} \big) \times 100')
