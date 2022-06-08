@@ -30,8 +30,8 @@ class feargreed():
 
     def get_comments(self,day):
         df = self.df
-        greed_comments = df[df['날짜'] == day.isoformat()].sort_values(by='공포탐욕')['댓글'].head().to_list()
-        fear_comments = df[df['날짜'] == day.isoformat()].sort_values(by='공포탐욕')['댓글'].tail().to_list()
+        greed_comments = df[df['날짜'] == day.isoformat()].sort_values(by='공포탐욕')['댓글'].head(7).to_list()
+        fear_comments = df[df['날짜'] == day.isoformat()].sort_values(by='공포탐욕')['댓글'].tail(7).to_list()
         return fear_comments, greed_comments
     
     def get_period_df(self,period_check):
