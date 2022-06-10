@@ -63,3 +63,6 @@ with st.expander("공포탐욕지수 측정 방법"):
     st.latex(r'BertScore = S_{b} \big(0 \leq S_{b} \leq 1 \big)')
     st.latex(r'DayCount = N')
     st.latex(r'Score = \big(S_{l}+S_{b}-\frac{\sum \big(S_{l}+S_{b}\big)}{N} \big) \times 100')
+
+    st.latex(r'예측등락률 = \frac{내일의 예측가}{오늘의 예측가}')
+    st.latex(r'보정가격 = 오늘의 실제가 \times 예측등락률')
