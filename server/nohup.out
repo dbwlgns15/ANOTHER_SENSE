@@ -1,0 +1,203 @@
+[I 09:25:45.836 NotebookApp] Using EnvironmentKernelSpecManager...
+[I 09:25:45.836 NotebookApp] Started periodic updates of the kernel list (every 3 minutes).
+[I 09:25:46.308 NotebookApp] Loading IPython parallel extension
+[W 2022-06-03 09:25:47.153 LabApp] Config option `kernel_spec_manager_class` not recognized by `LabApp`.
+[W 2022-06-03 09:25:47.156 LabApp] 'ip' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2022-06-03 09:25:47.156 LabApp] 'port' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2022-06-03 09:25:47.156 LabApp] 'port' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2022-06-03 09:25:47.156 LabApp] 'port' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2022-06-03 09:25:47.156 LabApp] 'kernel_spec_manager_class' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2022-06-03 09:25:47.156 LabApp] 'iopub_data_rate_limit' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2022-06-03 09:25:47.157 LabApp] Config option `kernel_spec_manager_class` not recognized by `LabApp`.
+[I 2022-06-03 09:25:47.163 LabApp] JupyterLab extension loaded from /home/ubuntu/anaconda3/envs/tensorflow2_p37/lib/python3.7/site-packages/jupyterlab
+[I 2022-06-03 09:25:47.163 LabApp] JupyterLab application directory is /home/ubuntu/anaconda3/envs/tensorflow2_p37/share/jupyter/lab
+[I 09:25:47.173 NotebookApp] [nb_conda] enabled
+[I 09:25:47.173 NotebookApp] Serving notebooks from local directory: /home/ubuntu/server
+[I 09:25:47.173 NotebookApp] Jupyter Notebook 6.4.0 is running at:
+[I 09:25:47.173 NotebookApp] http://ip-172-31-40-135:8906/?token=3c0988b69feedf704604290e291699dc9f5bea73ae37a1ec
+[I 09:25:47.173 NotebookApp]  or http://127.0.0.1:8906/?token=3c0988b69feedf704604290e291699dc9f5bea73ae37a1ec
+[I 09:25:47.173 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 09:25:47.177 NotebookApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///home/ubuntu/.local/share/jupyter/runtime/nbserver-2236-open.html
+    Or copy and paste one of these URLs:
+        http://ip-172-31-40-135:8906/?token=3c0988b69feedf704604290e291699dc9f5bea73ae37a1ec
+     or http://127.0.0.1:8906/?token=3c0988b69feedf704604290e291699dc9f5bea73ae37a1ec
+[I 09:25:47.177 NotebookApp] Starting initial scan of virtual environments...
+[I 09:25:50.359 NotebookApp] Found new kernels in environments: conda_amazonei_mxnet_p36, conda_python3, conda_pytorch_latest_p37, conda_pytorch_p36, conda_mxnet_latest_p37, conda_mxnet_p36, conda_tensorflow2_latest_p37, conda_aws_neuron_pytorch_p36, conda_aws_neuron_tensorflow_p36, conda_anaconda3, conda_aws_neuron_mxnet_p36, conda_tensorflow2_p37, conda_tensorflow_p37
+[W 09:25:52.097 NotebookApp] 404 GET /tree/server (115.140.116.238) 41.150000ms referer=http://18.181.49.139:8906/login?next=%2Ftree%3F
+[I 09:25:57.112 NotebookApp] 302 GET / (115.140.116.238) 0.500000ms
+[C 09:45:39.541 NotebookApp] received signal 15, stopping
+[I 09:45:39.544 NotebookApp] Shutting down 0 kernels
+[I 09:45:39.544 NotebookApp] Shutting down 0 terminals
+[I 21:06:52.230 NotebookApp] Using EnvironmentKernelSpecManager...
+[I 21:06:52.231 NotebookApp] Started periodic updates of the kernel list (every 3 minutes).
+[I 21:06:52.423 NotebookApp] Loading IPython parallel extension
+[W 2022-06-03 21:06:52.829 LabApp] Config option `kernel_spec_manager_class` not recognized by `LabApp`.
+[W 2022-06-03 21:06:52.831 LabApp] 'ip' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2022-06-03 21:06:52.831 LabApp] 'port' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2022-06-03 21:06:52.831 LabApp] 'port' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2022-06-03 21:06:52.831 LabApp] 'port' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2022-06-03 21:06:52.831 LabApp] 'kernel_spec_manager_class' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2022-06-03 21:06:52.831 LabApp] 'iopub_data_rate_limit' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2022-06-03 21:06:52.832 LabApp] Config option `kernel_spec_manager_class` not recognized by `LabApp`.
+[I 2022-06-03 21:06:52.839 LabApp] JupyterLab extension loaded from /home/ubuntu/anaconda3/envs/tensorflow2_p37/lib/python3.7/site-packages/jupyterlab
+[I 2022-06-03 21:06:52.839 LabApp] JupyterLab application directory is /home/ubuntu/anaconda3/envs/tensorflow2_p37/share/jupyter/lab
+[I 21:06:52.845 NotebookApp] [nb_conda] enabled
+[I 21:06:52.845 NotebookApp] The port 8906 is already in use, trying another port.
+[I 21:06:52.845 NotebookApp] Serving notebooks from local directory: /home/ubuntu/server
+[I 21:06:52.845 NotebookApp] Jupyter Notebook 6.4.0 is running at:
+[I 21:06:52.845 NotebookApp] http://ip-172-31-40-135:8907/?token=f4fa8f976a292ae786062f00ef7280ee3150f2f346dc588a
+[I 21:06:52.845 NotebookApp]  or http://127.0.0.1:8907/?token=f4fa8f976a292ae786062f00ef7280ee3150f2f346dc588a
+[I 21:06:52.845 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 21:06:52.848 NotebookApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///home/ubuntu/.local/share/jupyter/runtime/nbserver-10167-open.html
+    Or copy and paste one of these URLs:
+        http://ip-172-31-40-135:8907/?token=f4fa8f976a292ae786062f00ef7280ee3150f2f346dc588a
+     or http://127.0.0.1:8907/?token=f4fa8f976a292ae786062f00ef7280ee3150f2f346dc588a
+[I 21:06:52.848 NotebookApp] Starting initial scan of virtual environments...
+[I 21:06:54.578 NotebookApp] Found new kernels in environments: conda_mxnet_latest_p37, conda_tensorflow_p37, conda_anaconda3, conda_aws_neuron_mxnet_p36, conda_tensorflow2_p37, conda_tensorflow2_latest_p37, conda_pytorch_p36, conda_python3, conda_aws_neuron_pytorch_p36, conda_aws_neuron_tensorflow_p36, conda_mxnet_p36, conda_amazonei_mxnet_p36, conda_pytorch_latest_p37
+[C 21:40:29.272 NotebookApp] received signal 15, stopping
+[I 21:40:29.273 NotebookApp] Shutting down 0 kernels
+[I 21:40:29.273 NotebookApp] Shutting down 0 terminals
+[I 09:07:52.280 NotebookApp] Using EnvironmentKernelSpecManager...
+[I 09:07:52.283 NotebookApp] Started periodic updates of the kernel list (every 3 minutes).
+[I 09:07:52.470 NotebookApp] Loading IPython parallel extension
+[W 2022-06-04 09:07:52.861 LabApp] Config option `kernel_spec_manager_class` not recognized by `LabApp`.
+[W 2022-06-04 09:07:52.863 LabApp] 'ip' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2022-06-04 09:07:52.863 LabApp] 'port' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2022-06-04 09:07:52.863 LabApp] 'port' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2022-06-04 09:07:52.863 LabApp] 'port' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2022-06-04 09:07:52.863 LabApp] 'kernel_spec_manager_class' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2022-06-04 09:07:52.863 LabApp] 'iopub_data_rate_limit' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2022-06-04 09:07:52.864 LabApp] Config option `kernel_spec_manager_class` not recognized by `LabApp`.
+[I 2022-06-04 09:07:52.870 LabApp] JupyterLab extension loaded from /home/ubuntu/anaconda3/envs/tensorflow2_p37/lib/python3.7/site-packages/jupyterlab
+[I 2022-06-04 09:07:52.870 LabApp] JupyterLab application directory is /home/ubuntu/anaconda3/envs/tensorflow2_p37/share/jupyter/lab
+[I 09:07:52.876 NotebookApp] [nb_conda] enabled
+[I 09:07:52.876 NotebookApp] The port 8906 is already in use, trying another port.
+[I 09:07:52.877 NotebookApp] Serving notebooks from local directory: /home/ubuntu/server
+[I 09:07:52.877 NotebookApp] Jupyter Notebook 6.4.0 is running at:
+[I 09:07:52.877 NotebookApp] http://ip-172-31-40-135:8907/?token=c3afeaf8cfd7ebaac7e9279e05d9d7e560cd58760ad22648
+[I 09:07:52.877 NotebookApp]  or http://127.0.0.1:8907/?token=c3afeaf8cfd7ebaac7e9279e05d9d7e560cd58760ad22648
+[I 09:07:52.877 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 09:07:52.880 NotebookApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///home/ubuntu/.local/share/jupyter/runtime/nbserver-12772-open.html
+    Or copy and paste one of these URLs:
+        http://ip-172-31-40-135:8907/?token=c3afeaf8cfd7ebaac7e9279e05d9d7e560cd58760ad22648
+     or http://127.0.0.1:8907/?token=c3afeaf8cfd7ebaac7e9279e05d9d7e560cd58760ad22648
+[I 09:07:52.880 NotebookApp] Starting initial scan of virtual environments...
+[I 09:07:54.527 NotebookApp] Found new kernels in environments: conda_pytorch_latest_p37, conda_tensorflow2_p37, conda_aws_neuron_tensorflow_p36, conda_amazonei_mxnet_p36, conda_tensorflow2_latest_p37, conda_aws_neuron_mxnet_p36, conda_python3, conda_mxnet_p36, conda_tensorflow_p37, conda_mxnet_latest_p37, conda_anaconda3, conda_pytorch_p36, conda_aws_neuron_pytorch_p36
+[C 09:11:31.858 NotebookApp] received signal 15, stopping
+[I 09:11:31.859 NotebookApp] Shutting down 0 kernels
+[I 09:11:31.859 NotebookApp] Shutting down 0 terminals
+[I 14:51:37.923 NotebookApp] Using EnvironmentKernelSpecManager...
+[I 14:51:37.924 NotebookApp] Started periodic updates of the kernel list (every 3 minutes).
+[I 14:51:38.111 NotebookApp] Loading IPython parallel extension
+[W 2022-06-05 14:51:38.464 LabApp] Config option `kernel_spec_manager_class` not recognized by `LabApp`.
+[W 2022-06-05 14:51:38.467 LabApp] 'ip' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2022-06-05 14:51:38.467 LabApp] 'port' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2022-06-05 14:51:38.467 LabApp] 'port' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2022-06-05 14:51:38.467 LabApp] 'port' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2022-06-05 14:51:38.467 LabApp] 'kernel_spec_manager_class' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2022-06-05 14:51:38.467 LabApp] 'iopub_data_rate_limit' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2022-06-05 14:51:38.468 LabApp] Config option `kernel_spec_manager_class` not recognized by `LabApp`.
+[I 2022-06-05 14:51:38.474 LabApp] JupyterLab extension loaded from /home/ubuntu/anaconda3/envs/tensorflow2_p37/lib/python3.7/site-packages/jupyterlab
+[I 2022-06-05 14:51:38.474 LabApp] JupyterLab application directory is /home/ubuntu/anaconda3/envs/tensorflow2_p37/share/jupyter/lab
+[I 14:51:38.480 NotebookApp] [nb_conda] enabled
+[I 14:51:38.480 NotebookApp] The port 8906 is already in use, trying another port.
+[I 14:51:38.480 NotebookApp] The port 8907 is already in use, trying another port.
+[I 14:51:38.480 NotebookApp] The port 8908 is already in use, trying another port.
+[I 14:51:38.481 NotebookApp] Serving notebooks from local directory: /home/ubuntu/server
+[I 14:51:38.481 NotebookApp] Jupyter Notebook 6.4.0 is running at:
+[I 14:51:38.481 NotebookApp] http://ip-172-31-40-135:8909/?token=e8a9a6e59743d807b3e1a968ec0eea7c674b3382cecff103
+[I 14:51:38.481 NotebookApp]  or http://127.0.0.1:8909/?token=e8a9a6e59743d807b3e1a968ec0eea7c674b3382cecff103
+[I 14:51:38.481 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 14:51:38.484 NotebookApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///home/ubuntu/.local/share/jupyter/runtime/nbserver-21324-open.html
+    Or copy and paste one of these URLs:
+        http://ip-172-31-40-135:8909/?token=e8a9a6e59743d807b3e1a968ec0eea7c674b3382cecff103
+     or http://127.0.0.1:8909/?token=e8a9a6e59743d807b3e1a968ec0eea7c674b3382cecff103
+[I 14:51:38.484 NotebookApp] Starting initial scan of virtual environments...
+[I 14:51:40.165 NotebookApp] Found new kernels in environments: conda_aws_neuron_pytorch_p36, conda_mxnet_p36, conda_amazonei_mxnet_p36, conda_aws_neuron_tensorflow_p36, conda_mxnet_latest_p37, conda_tensorflow2_latest_p37, conda_tensorflow_p37, conda_aws_neuron_mxnet_p36, conda_python3, conda_anaconda3, conda_pytorch_latest_p37, conda_tensorflow2_p37, conda_pytorch_p36
+[C 23:11:49.975 NotebookApp] received signal 15, stopping
+[I 23:11:49.976 NotebookApp] Shutting down 0 kernels
+[I 23:11:49.976 NotebookApp] Shutting down 0 terminals
+[I 23:26:04.101 NotebookApp] Using EnvironmentKernelSpecManager...
+[I 23:26:04.102 NotebookApp] Started periodic updates of the kernel list (every 3 minutes).
+[I 23:26:04.287 NotebookApp] Loading IPython parallel extension
+[W 2022-06-05 23:26:04.681 LabApp] Config option `kernel_spec_manager_class` not recognized by `LabApp`.
+[W 2022-06-05 23:26:04.683 LabApp] 'ip' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2022-06-05 23:26:04.683 LabApp] 'port' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2022-06-05 23:26:04.683 LabApp] 'port' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2022-06-05 23:26:04.683 LabApp] 'port' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2022-06-05 23:26:04.683 LabApp] 'kernel_spec_manager_class' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2022-06-05 23:26:04.684 LabApp] 'iopub_data_rate_limit' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2022-06-05 23:26:04.684 LabApp] Config option `kernel_spec_manager_class` not recognized by `LabApp`.
+[I 2022-06-05 23:26:04.691 LabApp] JupyterLab extension loaded from /home/ubuntu/anaconda3/envs/tensorflow2_p37/lib/python3.7/site-packages/jupyterlab
+[I 2022-06-05 23:26:04.691 LabApp] JupyterLab application directory is /home/ubuntu/anaconda3/envs/tensorflow2_p37/share/jupyter/lab
+[I 23:26:04.696 NotebookApp] [nb_conda] enabled
+[I 23:26:04.697 NotebookApp] The port 8906 is already in use, trying another port.
+[I 23:26:04.697 NotebookApp] The port 8907 is already in use, trying another port.
+[I 23:26:04.697 NotebookApp] Serving notebooks from local directory: /home/ubuntu/server
+[I 23:26:04.697 NotebookApp] Jupyter Notebook 6.4.0 is running at:
+[I 23:26:04.697 NotebookApp] http://ip-172-31-40-135:8908/?token=ca3b5c235f263db058921734f11ba99921254e38d9d0195e
+[I 23:26:04.697 NotebookApp]  or http://127.0.0.1:8908/?token=ca3b5c235f263db058921734f11ba99921254e38d9d0195e
+[I 23:26:04.697 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 23:26:04.700 NotebookApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///home/ubuntu/.local/share/jupyter/runtime/nbserver-3160-open.html
+    Or copy and paste one of these URLs:
+        http://ip-172-31-40-135:8908/?token=ca3b5c235f263db058921734f11ba99921254e38d9d0195e
+     or http://127.0.0.1:8908/?token=ca3b5c235f263db058921734f11ba99921254e38d9d0195e
+[I 23:26:04.700 NotebookApp] Starting initial scan of virtual environments...
+[I 23:26:06.381 NotebookApp] Found new kernels in environments: conda_pytorch_latest_p37, conda_anaconda3, conda_mxnet_p36, conda_mxnet_latest_p37, conda_python3, conda_pytorch_p36, conda_aws_neuron_tensorflow_p36, conda_tensorflow_p37, conda_tensorflow2_p37, conda_tensorflow2_latest_p37, conda_aws_neuron_pytorch_p36, conda_amazonei_mxnet_p36, conda_aws_neuron_mxnet_p36
+[I 23:30:50.003 NotebookApp] 302 GET / (162.142.125.212) 0.840000ms
+[I 23:30:50.255 NotebookApp] 302 GET / (162.142.125.212) 0.420000ms
+[I 23:30:50.502 NotebookApp] Malformed HTTP message from 162.142.125.212: Malformed HTTP version in HTTP Request-Line: 'HTTP/2.0'
+[I 23:30:50.755 NotebookApp] 302 GET /tree (162.142.125.212) 1.860000ms
+[I 23:30:51.004 NotebookApp] Malformed HTTP message from 162.142.125.212: Malformed HTTP version in HTTP Request-Line: 'HTTP/2.0'
+[I 23:30:51.528 NotebookApp] Malformed HTTP message from 162.142.125.212: Malformed HTTP version in HTTP Request-Line: 'HTTP/2.0'
+[C 15:21:28.711 NotebookApp] received signal 15, stopping
+[I 15:21:28.712 NotebookApp] Shutting down 0 kernels
+[I 15:21:28.712 NotebookApp] Shutting down 0 terminals
+[I 20:54:33.638 NotebookApp] Using EnvironmentKernelSpecManager...
+[I 20:54:33.640 NotebookApp] Started periodic updates of the kernel list (every 3 minutes).
+[I 20:54:33.835 NotebookApp] Loading IPython parallel extension
+[W 2022-06-06 20:54:34.244 LabApp] Config option `kernel_spec_manager_class` not recognized by `LabApp`.
+[W 2022-06-06 20:54:34.246 LabApp] 'ip' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2022-06-06 20:54:34.247 LabApp] 'port' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2022-06-06 20:54:34.247 LabApp] 'port' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2022-06-06 20:54:34.247 LabApp] 'port' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2022-06-06 20:54:34.247 LabApp] 'kernel_spec_manager_class' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2022-06-06 20:54:34.247 LabApp] 'iopub_data_rate_limit' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2022-06-06 20:54:34.247 LabApp] Config option `kernel_spec_manager_class` not recognized by `LabApp`.
+[I 2022-06-06 20:54:34.254 LabApp] JupyterLab extension loaded from /home/ubuntu/anaconda3/envs/tensorflow2_p37/lib/python3.7/site-packages/jupyterlab
+[I 2022-06-06 20:54:34.254 LabApp] JupyterLab application directory is /home/ubuntu/anaconda3/envs/tensorflow2_p37/share/jupyter/lab
+[I 20:54:34.260 NotebookApp] [nb_conda] enabled
+[I 20:54:34.260 NotebookApp] The port 8906 is already in use, trying another port.
+[I 20:54:34.260 NotebookApp] The port 8907 is already in use, trying another port.
+[I 20:54:34.261 NotebookApp] Serving notebooks from local directory: /home/ubuntu/server
+[I 20:54:34.261 NotebookApp] Jupyter Notebook 6.4.0 is running at:
+[I 20:54:34.261 NotebookApp] http://ip-172-31-40-135:8908/?token=80d78dc1e06a7786643c78c17d8d88ad824882ac385821d0
+[I 20:54:34.261 NotebookApp]  or http://127.0.0.1:8908/?token=80d78dc1e06a7786643c78c17d8d88ad824882ac385821d0
+[I 20:54:34.261 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 20:54:34.264 NotebookApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///home/ubuntu/.local/share/jupyter/runtime/nbserver-10784-open.html
+    Or copy and paste one of these URLs:
+        http://ip-172-31-40-135:8908/?token=80d78dc1e06a7786643c78c17d8d88ad824882ac385821d0
+     or http://127.0.0.1:8908/?token=80d78dc1e06a7786643c78c17d8d88ad824882ac385821d0
+[I 20:54:34.264 NotebookApp] Starting initial scan of virtual environments...
+[I 20:54:36.036 NotebookApp] Found new kernels in environments: conda_aws_neuron_tensorflow_p36, conda_tensorflow2_p37, conda_pytorch_p36, conda_aws_neuron_mxnet_p36, conda_pytorch_latest_p37, conda_mxnet_p36, conda_python3, conda_tensorflow2_latest_p37, conda_aws_neuron_pytorch_p36, conda_mxnet_latest_p37, conda_tensorflow_p37, conda_amazonei_mxnet_p36, conda_anaconda3
+[C 21:15:21.324 NotebookApp] received signal 15, stopping
+[I 21:15:21.326 NotebookApp] Shutting down 0 kernels
+[I 21:15:21.326 NotebookApp] Shutting down 0 terminals
